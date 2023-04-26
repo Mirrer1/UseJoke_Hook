@@ -1,18 +1,17 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 
+import useJoke from 'hook/useJoke';
 import JokingWrapper from 'style/JokingPage';
 
 const Home = () => {
-  const onChangeJoke = useCallback((e: React.ChangeEvent) => {
-    console.log((e.target as HTMLInputElement).value);
-  }, []);
+  const [jokeText, onChageJokeText] = useJoke();
 
   return (
     <JokingWrapper>
       <header>Pick a joke.</header>
       <p>useJoke() outputs a random joke.</p>
 
-      <select onChange={onChangeJoke}>
+      <select onChange={onChageJokeText}>
         <option hidden />
         <option value="0">useJoke()</option>
         <option value="1">useJoke(1)</option>
@@ -22,7 +21,7 @@ const Home = () => {
         <option value="5">useJoke(5)</option>
       </select>
 
-      <div>Why can you never trust spiders? Because they post stuff on the web.</div>
+      <div>{jokeText}</div>
     </JokingWrapper>
   );
 };

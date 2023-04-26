@@ -24,7 +24,7 @@ const JokingWrapper = styled.section`
   & > select {
     text-align: center;
     display: block;
-    width: 100%;
+    width: 23em;
     margin: 0 auto;
     padding: 0.3em;
     border: none;
@@ -38,6 +38,7 @@ const JokingWrapper = styled.section`
   }
 
   & > div {
+    height: 1em;
     font-size: 1.3rem;
   }
 `;
