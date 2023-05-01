@@ -4,14 +4,14 @@ import useJoke from 'hook/useJoke';
 import JokingWrapper from 'style/JokingPage';
 
 const Home = () => {
-  const [jokeText, onChageJokeText] = useJoke();
+  const [jokeText, onChangeJokeText] = useJoke();
 
   return (
     <JokingWrapper>
       <header>Pick a joke.</header>
       <p>useJoke() outputs a random joke.</p>
 
-      <select onChange={onChageJokeText}>
+      <select onChange={onChangeJokeText}>
         <option hidden />
         <option value={0}>useJoke()</option>
         <option value={1}>useJoke(1)</option>
